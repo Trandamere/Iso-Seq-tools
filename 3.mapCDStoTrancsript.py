@@ -4,7 +4,7 @@ import time
 import argparse
 import os
 import sys
-parser = argparse.ArgumentParser(description="功能：根据输入的gtf注释及基因组文件，生成内含子注释文件，提取内含子序列，提取内含子GTAG序列，进行GTAG统计。需要使用软件cufflinks")
+parser = argparse.ArgumentParser(description="功能：根据emboss预测cds结果，gtf注释文件和intron注释文件输出匹配的cds注释文件。需要使用软件cufflinks")
 parser.add_argument('-gtf', "--gtf", required=True,  help="gtf文件所在路径")
 parser.add_argument('-cds', "--cds", required=True,  help="emboss 预测cds.fasta路径")
 parser.add_argument('-intron', "--intron", required=True,  help="转录本内含子注释")
